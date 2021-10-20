@@ -1,56 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Stats preview card component</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="card-img">
-      <img src="./images/image-header-mobile.jpg" alt="" class="mobile-img">
-      <img src="./images/image-header-desktop.jpg" alt="" class="desktop-img">
-    </div>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
 
-    <div class="content">
-      <h1>Get <span class="accent">insights</span> that help your business grow.</h1>
-      <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.</p>
+		<title>Frontend Mentor | Stats preview card component</title>
+		<link
+			href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+	</head>
+	<body class="h-screen p-8">
+		<div
+			class="
+				card
+				mx-auto
+				max-w-lg
+				md:max-w-5xl
+				rounded-xl
+				overflow-hidden
+				md:grid md:grid-cols-2
+			"
+		>
+			<div class="card-img relative">
+				<img
+					class="max-w-full md:hidden"
+					src="./images/image-header-mobile.jpg"
+					alt="women in a room working and smiling"
+				/>
+				<img
+					class="
+						w-full
+						h-full
+						hidden
+						md:inline-block
+						absolute
+						inset-0
+						object-cover object-center
+					"
+					src="./images/image-header-desktop.jpg"
+					alt="women in a room working and smiling"
+				/>
+			</div>
+			<div class="content p-12 row-start-1 col-start-1 md:pr-24">
+				<h1
+					class="
+						text-4xl text-center text-white
+						font-bold
+						tracking-wide
+						md:text-left md:leading-10 md:text-3xl
+					"
+				>
+					Get <span class="text-purple-500">insights</span> that help your
+					business grow.
+				</h1>
+				<p
+					class="
+						my-7
+						text-white text-center text-xl
+						leading-8
+						opacity-70
+						md:text-left md:text-sm
+					"
+				>
+					Discover the benefits of data analytics and make better decisions
+					regarding revenue, customer experience, and overall efficiency.
+				</p>
 
-      <div class="stats">
-        <!-- ======= -->
-        <div class="stat-item">
-          <h3>10k+</h3>
-          <p>companies</p>
-        </div>
-        <!-- ======= -->
-        <!-- ======= -->
-        <div class="stat-item">
-          <h3>314</h3>
-          <p>templates</p>
-        </div>
-        <!-- ======= -->
-        <!-- ======= -->
-        <div class="stat-item">
-          <h3>12M+</h3>
-          <p>queries</p>
-        </div>
-        <!-- ======= -->
-      </div>
-    </div>
-  </div>
-  
-  <!-- <div class="attribution">
+				<div
+					class="
+						stats
+						flex flex-col
+						items-center
+						space-y-11
+						mt-12
+						text-center
+						md:text-left md:flex-row md:space-y-0 md:justify-between md:max-w-sm
+					"
+				>
+					<div class="stat-item">
+						<h3 class="text-white font-bold text-3xl mb-1 md:text-xl">10k+</h3>
+						<p class="text-white text-xs opacity-70 uppercase tracking-widest">
+							companies
+						</p>
+					</div>
+					<div class="stat-item">
+						<h3 class="text-white font-bold text-3xl mb-1 md:text-xl">314</h3>
+						<p class="text-white text-xs opacity-70 uppercase tracking-widest">
+							templates
+						</p>
+					</div>
+					<div class="stat-item">
+						<h3 class="text-white font-bold text-3xl mb-1 md:text-xl">12M+</h3>
+						<p class="text-white text-xs opacity-70 uppercase tracking-widest">
+							queries
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
-</body>
+	</body>
 </html>
